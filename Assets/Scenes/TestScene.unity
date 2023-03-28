@@ -13041,7 +13041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836605561}
-  m_LocalRotation: {x: 0.15440278, y: 5.3716746e-15, z: -3.396293e-16, w: 0.988008}
+  m_LocalRotation: {x: 0.1544028, y: -0.00000002944491, z: 0.0000000046015587, w: 0.988008}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13456,7 +13456,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.18690899, y: 0.000000036839584, z: -0.00000000700917, w: 0.9823773}
+  m_LocalRotation: {x: 0.18690899, y: 0.000000036838934, z: -0.000000007009046, w: 0.9823773}
   m_LocalPosition: {x: -5.379521, y: 7.1940002, z: -6.3891497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15800,6 +15800,10 @@ MonoBehaviour:
     description: You have to blabla
     experienceReward: 54
     goldReward: 425
+    goal:
+      goalType: 0
+      requiredAdmount: 3
+      currentAmount: 0
   player: {fileID: 1772839294}
   questWindow: {fileID: 1815431394}
   titleText: {fileID: 1286898054}
@@ -16871,7 +16875,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517914002}
-  m_LocalRotation: {x: 0.118411556, y: -0.000000019101977, z: 0.0000000022779205, w: 0.9929646}
+  m_LocalRotation: {x: 0.118411556, y: 0.00000001902581, z: -0.0000000022688378, w: 0.9929646}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17346,6 +17350,10 @@ MonoBehaviour:
     description: 
     experienceReward: 0
     goldReward: 0
+    goal:
+      goalType: 0
+      requiredAdmount: 0
+      currentAmount: 0
 --- !u!1 &1800155757
 GameObject:
   m_ObjectHideFlags: 0
@@ -17945,7 +17953,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905028796}
-  m_LocalRotation: {x: 0.18690898, y: 0.00000001690316, z: -0.0000000032160277, w: 0.9823773}
+  m_LocalRotation: {x: 0.18690898, y: 0.000000016901742, z: -0.0000000032157577, w: 0.9823773}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

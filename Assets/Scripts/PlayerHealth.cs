@@ -34,6 +34,17 @@ public class PlayerHealth : MonoBehaviour
         health -= 1;
         experience += 2;
         gold += 5;
+
+        if (quest.isActive)
+        {
+            quest.goal.EnemyKilled();
+            if (quest.goal.IsReached())
+            {
+                experience += quest.experienceReward;
+                gold += quest.goldReward;
+                quest.Complete();
+            }
+        }
     }
     #endregion
 
