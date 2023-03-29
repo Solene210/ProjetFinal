@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     public Transform itemContent;
     public GameObject InventoryItem;
     public Toggle EnableRemove;
-    public InventoryItemController[] inventoryItems;
+    public InventoryItemController[] inventoryItemsController;
     #endregion
 
     #region Unity Life Cycle
@@ -55,8 +55,13 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(InventoryItem, itemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            var removeButton = obj.transform.Find("RemoveButton").GetComponent<Button>();
             itemName.text = item._name;
             itemIcon.sprite = item.icon;
+            if (EnableRemove.isOn)
+            {
+                removeButton.gameObject.SetActive(true);
+            }
         }
         SetInventoryItems();
     }
@@ -81,10 +86,10 @@ public class InventoryManager : MonoBehaviour
 
     public void SetInventoryItems()
     {
-        inventoryItems = itemContent.GetComponentsInChildren<InventoryItemController>();
+        inventoryItemsController = itemContent.GetComponentsInChildren<InventoryItemController>();
         for (int i = 0; i < items.Count; i++)
         {
-            //InventoryItem[i].AddItem(items[i]);
+            inventoryItemsController[i].AddItem(items[i]);
         }
     }
     #endregion

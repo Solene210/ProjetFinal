@@ -32,11 +32,28 @@ public class InventoryItemController : MonoBehaviour
     public void RemoveItem()
     {
         InventoryManager.Instance.Remove(item);
+        Destroy(gameObject);
     }
 
     public void AddItem(Item newItem)
     {
         item = newItem;
+    }
+
+    public void UseItem()
+    {
+        switch (item.type)
+        {
+            case Item.ItemType.MagicRock:
+                break;
+            case Item.ItemType.Potion:
+                PlayerHealth.Instance.IncreaseHealth(item.value);
+                break;
+            case Item.ItemType.Gem:
+                PlayerHealth.Instance.IncreaseExp(item.value);
+                break;
+        }
+        RemoveItem();
     }
     #endregion
 
