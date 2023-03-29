@@ -294,7 +294,6 @@ GameObject:
   - component: {fileID: 2998790890661922785}
   - component: {fileID: 1420903622550586101}
   - component: {fileID: 6839496598789956244}
-  - component: {fileID: 1024441331086231279}
   m_Layer: 0
   m_Name: MagicRock_4
   m_TagString: Untagged
@@ -363,19 +362,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3bdba9e364af054c8225d527156cb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 794ab7c05897b9a42aa722f199b8ea4c, type: 2}
---- !u!114 &1024441331086231279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4993863463701797828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20227c42902394d41802e5910f12b6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 794ab7c05897b9a42aa722f199b8ea4c, type: 2}

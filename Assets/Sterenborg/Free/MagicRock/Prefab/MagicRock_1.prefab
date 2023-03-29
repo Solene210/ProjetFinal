@@ -258,10 +258,10 @@ GameObject:
   - component: {fileID: 3800644967726157964}
   - component: {fileID: 800246651}
   - component: {fileID: 4417179434196314068}
-  - component: {fileID: 481810677786030828}
+  - component: {fileID: 1734226274529024424}
   m_Layer: 0
   m_Name: MagicRock_1
-  m_TagString: Untagged
+  m_TagString: MagicRock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 77e96889cd34e464d97f85b4f5ee008f, type: 2}
---- !u!114 &481810677786030828
+--- !u!114 &1734226274529024424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,10 +339,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868967944735085944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3bdba9e364af054c8225d527156cb5c, type: 3}
+  m_Script: {fileID: 11500000, guid: ee505cefbe1578543b607ace29408782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 77e96889cd34e464d97f85b4f5ee008f, type: 2}
+  item: {fileID: 0}
 --- !u!1 &6351928619817666489
 GameObject:
   m_ObjectHideFlags: 0

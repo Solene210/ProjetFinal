@@ -262,8 +262,8 @@ GameObject:
   - component: {fileID: 7876060679593959756}
   - component: {fileID: 6819359352588652720}
   - component: {fileID: 5666766180979024504}
+  - component: {fileID: 6060027587481750039}
   - component: {fileID: 8933792777754156406}
-  - component: {fileID: 1426883973}
   m_Layer: 0
   m_Name: MagicRock_2
   m_TagString: Untagged
@@ -322,6 +322,19 @@ CapsuleCollider:
   m_Height: 1.389102
   m_Direction: 1
   m_Center: {x: -0.036124066, y: 1.3545718, z: 0}
+--- !u!114 &6060027587481750039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173715022063692764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee505cefbe1578543b607ace29408782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: e88773bbf31b8054f84f6914cb45e78a, type: 2}
 --- !u!114 &8933792777754156406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,19 +345,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20227c42902394d41802e5910f12b6b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e88773bbf31b8054f84f6914cb45e78a, type: 2}
---- !u!114 &1426883973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5173715022063692764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3bdba9e364af054c8225d527156cb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: e88773bbf31b8054f84f6914cb45e78a, type: 2}

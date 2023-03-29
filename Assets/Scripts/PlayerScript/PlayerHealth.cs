@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public Quest quest;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI expText;
+    [SerializeField] private GameObject gameOverPanel;
     #endregion
 
     #region Unity Life Cycle
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        
+        healthText.text = $"HP : {health}";
     }
 
     void Update()
@@ -50,6 +51,15 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+    public void DecreaseHealth(int value)
+    {
+        health -= value;
+        healthText.text = $"HP : {health}";
+        if (health == 0)
+        {
+            GameOver();
+        }
+    }
 
     public void IncreaseHealth(int value)
     {
@@ -62,9 +72,14 @@ public class PlayerHealth : MonoBehaviour
         experience += value;
         expText.text = $"HP : {experience}";
     }
+
+    private void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+    }
     #endregion
 
     #region Private & Protected
-    
+
     #endregion
 }

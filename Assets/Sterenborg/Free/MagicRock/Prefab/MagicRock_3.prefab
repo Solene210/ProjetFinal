@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8481659943917414675}
   - component: {fileID: 8051595538325807647}
   - component: {fileID: 600094385161311526}
-  - component: {fileID: 8584123739691331452}
+  - component: {fileID: 5703163865458511808}
   - component: {fileID: 1386519218561767046}
   m_Layer: 0
   m_Name: MagicRock_3
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 23304059522089946929ba3a0bb9cd80, type: 2}
---- !u!114 &8584123739691331452
+--- !u!114 &5703163865458511808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,10 +177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2424636657009852491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3bdba9e364af054c8225d527156cb5c, type: 3}
+  m_Script: {fileID: 11500000, guid: ee505cefbe1578543b607ace29408782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 23304059522089946929ba3a0bb9cd80, type: 2}
+  item: {fileID: 0}
 --- !u!136 &1386519218561767046
 CapsuleCollider:
   m_ObjectHideFlags: 0
