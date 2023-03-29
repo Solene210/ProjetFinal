@@ -7,7 +7,9 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
-    public Animator animator;
+    public GameObject dialogueBox;
+    public GameObject dialogueButton;
+
     #region Unity Life Cycle
     void Start()
     {
@@ -18,7 +20,8 @@ public class DialogueManager : MonoBehaviour
     #region Methods
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("IsOpen", true);
+        dialogueBox.SetActive(true);
+        dialogueButton.SetActive(false);
         nameText.text = dialogue.name;
         _sentences.Clear();
         foreach (string sentence in dialogue.sentences)
@@ -51,7 +54,8 @@ public class DialogueManager : MonoBehaviour
     }
     private void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        dialogueBox.SetActive(false);
+        dialogueButton.SetActive(true);
     }
     #endregion
 

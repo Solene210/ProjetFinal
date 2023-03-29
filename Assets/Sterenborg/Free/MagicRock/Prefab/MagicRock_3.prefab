@@ -108,6 +108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8481659943917414675}
   - component: {fileID: 8051595538325807647}
+  - component: {fileID: 600094385161311526}
+  - component: {fileID: 8584123739691331452}
+  - component: {fileID: 1386519218561767046}
   m_Layer: 0
   m_Name: MagicRock_3
   m_TagString: Untagged
@@ -134,7 +137,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8051595538325807647
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -142,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 2424636657009852491}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8802b26e4971ff7499b0852b66faf4b5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3521ed8b379d74943832749e233f41fe, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -151,7 +154,47 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &600094385161311526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424636657009852491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20227c42902394d41802e5910f12b6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 23304059522089946929ba3a0bb9cd80, type: 2}
+--- !u!114 &8584123739691331452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424636657009852491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bdba9e364af054c8225d527156cb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 23304059522089946929ba3a0bb9cd80, type: 2}
+--- !u!136 &1386519218561767046
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424636657009852491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.16462621
+  m_Height: 1.4971924
+  m_Direction: 1
+  m_Center: {x: -0.018282324, y: 1.3236389, z: 0.017254114}
 --- !u!1 &2559450454369960669
 GameObject:
   m_ObjectHideFlags: 0
