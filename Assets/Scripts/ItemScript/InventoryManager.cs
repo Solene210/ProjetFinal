@@ -20,16 +20,6 @@ public class InventoryManager : MonoBehaviour
     {
         Instance = this;
     }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     #endregion
 
     #region methods
@@ -92,9 +82,5 @@ public class InventoryManager : MonoBehaviour
             inventoryItemsController[i].AddItem(items[i]);
         }
     }
-    #endregion
-
-    #region Private & Protected
-    
     #endregion
 }

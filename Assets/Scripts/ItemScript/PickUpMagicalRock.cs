@@ -10,29 +10,13 @@ public class PickUpMagicalRock : MonoBehaviour
     #endregion
 
     #region Unity Life Cycle
-    private void Awake()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PickUp();
+        }
     }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-    
-    private void OnMouseDown()
-    {
-        PickUp();
-    }
-    #endregion
-
-    #region methods
-
     #endregion
 
     #region methods
@@ -42,9 +26,5 @@ public class PickUpMagicalRock : MonoBehaviour
         Destroy(gameObject);
         _victoryPanel.SetActive(true);
     }
-    #endregion
-
-    #region Private & Protected
-
     #endregion
 }

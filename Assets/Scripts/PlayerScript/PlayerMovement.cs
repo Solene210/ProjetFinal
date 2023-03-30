@@ -21,11 +21,6 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Unity Life Cycle
-    private void Awake()
-    {
-        
-    }
-
     void Start()
     {
         _cameraTransform = Camera.main.transform;

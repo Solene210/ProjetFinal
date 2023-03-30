@@ -8,11 +8,9 @@ public class PlayerHealth : MonoBehaviour
     #region Expose
     public static PlayerHealth Instance;
     public int health = 5;
-    public int experience = 40;
-    public int gold = 1000;
+    public int gemme = 0;
     public Quest quest;
     public TextMeshProUGUI healthText;
-    public TextMeshProUGUI expText;
     [SerializeField] private GameObject gameOverPanel;
     #endregion
 
@@ -26,27 +24,20 @@ public class PlayerHealth : MonoBehaviour
     {
         healthText.text = $"HP : {health}";
     }
-
-    void Update()
-    {
-        
-    }
     #endregion
 
     #region methods
     public void GoBattle()
     {
         health -= 1;
-        experience += 2;
-        gold += 5;
+        gemme += 5;
 
         if (quest.isActive)
         {
             quest.goal.EnemyKilled();
             if (quest.goal.IsReached())
             {
-                experience += quest.experienceReward;
-                gold += quest.goldReward;
+                gemme += quest.gemmeReward;
                 quest.Complete();
             }
         }
@@ -66,20 +57,10 @@ public class PlayerHealth : MonoBehaviour
         health += value;
         healthText.text = $"HP : {health}";
     }
-    
-    public void IncreaseExp(int value)
-    {
-        experience += value;
-        expText.text = $"HP : {experience}";
-    }
 
     private void GameOver()
     {
         gameOverPanel.SetActive(true);
     }
-    #endregion
-
-    #region Private & Protected
-
     #endregion
 }

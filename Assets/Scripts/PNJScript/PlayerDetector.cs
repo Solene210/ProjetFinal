@@ -26,12 +26,4 @@ public class PlayerDetector : MonoBehaviour
         }
     }
     #endregion
-
-    #region methods
-
-    #endregion
-
-    #region Private & Protected
-
-    #endregion
 }

@@ -7,25 +7,7 @@ public class InventoryItemController : MonoBehaviour
 {
     #region Expose
     Item item;
-
     public Button removeButton;
-    #endregion
-
-    #region Unity Life Cycle
-    private void Awake()
-    {
-        
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     #endregion
 
     #region methods
@@ -49,15 +31,8 @@ public class InventoryItemController : MonoBehaviour
             case Item.ItemType.Potion:
                 PlayerHealth.Instance.IncreaseHealth(item.value);
                 break;
-            case Item.ItemType.Gem:
-                PlayerHealth.Instance.IncreaseExp(item.value);
-                break;
         }
         RemoveItem();
     }
-    #endregion
-
-    #region Private & Protected
-    
     #endregion
 }

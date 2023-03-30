@@ -9,24 +9,6 @@ public class QuestGoal
     public GoalType goalType;
     public int requiredAdmount;
     public int currentAmount;
-
-    #endregion
-
-    #region Unity Life Cycle
-    private void Awake()
-    {
-        
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     #endregion
 
     #region methods
@@ -42,22 +24,22 @@ public class QuestGoal
             currentAmount++;
         }
     }
-    public void ItemCollected()
+
+    public void CollectMAgicRock()
     {
-        if(goalType == GoalType.Gathering)
+        if(goalType == GoalType.CollectMagicRock)
         {
-            currentAmount++;
+            if (GameObject.FindGameObjectWithTag("MagicRock"))
+            {
+                currentAmount++;
+            }
         }
     }
-    #endregion
-
-    #region Private & Protected
-    
     #endregion
 }
 
 public enum GoalType
 {
     Kill,
-    Gathering
+    CollectMagicRock
 }

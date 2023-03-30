@@ -9,13 +9,8 @@ public class Quest
     public bool isActive;
     public string title;
     public string description;
-    public int experienceReward;
-    public int goldReward;
+    public int gemmeReward;
     public QuestGoal goal;
-    #endregion
-
-    #region Unity Life Cycle
-
     #endregion
 
     #region methods
@@ -24,9 +19,5 @@ public class Quest
         isActive = false;
         Debug.Log(title + "was completed!");
     }
-    #endregion
-
-    #region Private & Protected
-    
     #endregion
 }

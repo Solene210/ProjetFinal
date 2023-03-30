@@ -9,24 +9,12 @@ public class ItemPickUp : MonoBehaviour
     #endregion
 
     #region Unity Life Cycle
-    private void Awake()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    private void OnMouseDown()
-    {
-        PickUp();
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PickUp();
+        }
     }
     #endregion
 
@@ -36,9 +24,5 @@ public class ItemPickUp : MonoBehaviour
         InventoryManager.Instance.Add(item);
         Destroy(gameObject);
     }
-    #endregion
-
-    #region Private & Protected
-    
     #endregion
 }

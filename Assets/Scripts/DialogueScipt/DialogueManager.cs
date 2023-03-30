@@ -9,11 +9,20 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public GameObject dialogueBox;
     public GameObject dialogueButton;
+    public QuestGiver questGiver;
 
     #region Unity Life Cycle
     void Start()
     {
         _sentences= new Queue<string>();
+    }
+
+    private void Update()
+    {
+        //if (Input.GetKey(KeyCode.F))
+        //{
+        //    DisplayNextSentence();
+        //}
     }
     #endregion
 
@@ -56,6 +65,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         dialogueButton.SetActive(true);
+        questGiver.EndDialogue?.Invoke();
     }
     #endregion
 

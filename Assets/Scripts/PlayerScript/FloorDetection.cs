@@ -45,8 +45,4 @@ public class FloorDetection : MonoBehaviour
         return averagePosition;
     }
     #endregion
-
-    #region Private & Protected
-
-    #endregion
 }

@@ -2,44 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestGiver : MonoBehaviour
 {
     #region Expose
+    [Header("Quest Parameter")]
     public Quest quest;
     public PlayerHealth player;
     public GameObject questWindow;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
-    public TextMeshProUGUI experienceText;
-    public TextMeshProUGUI goldText;
-    #endregion
-
-    #region Unity Life Cycle
-    private void Awake()
-    {
-        
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public TextMeshProUGUI gemmeText;
+    [Space]
+    [Header("Event")]
+    public UnityEvent EndDialogue;
     #endregion
 
     #region methods
+    public void LaunchQuest()
+    {
+        EndDialogue.AddListener(OpenQuestWindow);
+    }
+
     public void OpenQuestWindow()
     {
         questWindow.SetActive(true);
         titleText.text = quest.title;
         descriptionText.text = quest.description;
-        experienceText.text = quest.experienceReward.ToString();
-        goldText.text = quest.goldReward.ToString();
+        gemmeText.text = quest.gemmeReward.ToString();
     }
 
     public void AcceptQuest()
@@ -48,9 +39,5 @@ public class QuestGiver : MonoBehaviour
         quest.isActive = true;
         player.quest = quest;
     }
-    #endregion
-
-    #region Private & Protected
-    
     #endregion
 }
