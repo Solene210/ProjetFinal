@@ -16,13 +16,16 @@ public class QuestGiver : MonoBehaviour
     public TextMeshProUGUI gemmeText;
     [Space]
     [Header("Event")]
-    public UnityEvent EndDialogue;
+    public UnityEvent EndDialogueEvent;
     #endregion
 
     #region methods
-    public void LaunchQuest()
+    public void CallQuestWindow()
     {
-        EndDialogue.AddListener(OpenQuestWindow);
+#if LOG_EVENT
+        Debug.Log("ajout du listener OpenQuest");
+#endif
+        EndDialogueEvent.AddListener(OpenQuestWindow);
     }
 
     public void OpenQuestWindow()
@@ -39,5 +42,5 @@ public class QuestGiver : MonoBehaviour
         quest.isActive = true;
         player.quest = quest;
     }
-    #endregion
+#endregion
 }

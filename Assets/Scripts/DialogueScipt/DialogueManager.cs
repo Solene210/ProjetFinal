@@ -1,3 +1,4 @@
+#define LOG_EVENT
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -65,7 +66,10 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         dialogueButton.SetActive(true);
-        questGiver.EndDialogue?.Invoke();
+#if LOG_EVENT
+        Debug.Log("endDialogueEvent est invoqué");
+#endif
+        questGiver.EndDialogueEvent?.Invoke();
     }
     #endregion
 

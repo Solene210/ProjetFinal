@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 1
   _name: MagicRock Green
   value: 0
-  icon: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+  icon: {fileID: 21300000, guid: d47e758981a15e148893ca56f7bd9ce8, type: 3}
   type: 0
