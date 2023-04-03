@@ -24,7 +24,7 @@ public class PickUpMagicalRock : MonoBehaviour
     {
         InventoryManager.Instance.Add(item);
         Destroy(gameObject);
-        _victoryPanel.SetActive(true);
+        //_victoryPanel.SetActive(true);
     }
     #endregion
 }
