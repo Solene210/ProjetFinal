@@ -11,6 +11,7 @@ public class Quest
     public string description;
     public int gemmeReward;
     public QuestGoal goal;
+    [SerializeField] private GameObject _victoryPanel;
     #endregion
 
     #region methods
@@ -18,6 +19,7 @@ public class Quest
     {
         isActive = false;
         Debug.Log(title + "was completed!");
+        _victoryPanel.SetActive(true);
     }
     #endregion
 }

@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 5666766180979024504}
   - component: {fileID: 6060027587481750039}
   - component: {fileID: 8933792777754156406}
+  - component: {fileID: 2376903012369482485}
   m_Layer: 0
   m_Name: MagicRock_2
   m_TagString: Untagged
@@ -335,6 +336,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: e88773bbf31b8054f84f6914cb45e78a, type: 2}
+  quest:
+    isActive: 0
+    title: 
+    description: 
+    gemmeReward: 0
+    goal:
+      goalType: 0
+      requiredAdmount: 0
+      currentAmount: 0
+    _victoryPanel: {fileID: 0}
+  gemme: 0
+  _victoryPanel: {fileID: 0}
 --- !u!114 &8933792777754156406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +361,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: e88773bbf31b8054f84f6914cb45e78a, type: 2}
+--- !u!114 &2376903012369482485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173715022063692764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864a59a381dfbc247a458498696c3eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _crystal: {fileID: 0}
+  _crystalEmpty: {fileID: 0}
+  _crystalColor: {fileID: 0}
 --- !u!1 &6036736767966139523
 GameObject:
   m_ObjectHideFlags: 0

@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836605561}
-  m_LocalRotation: {x: 0.22202213, y: 0.000000016776939, z: -0.000000003820197, w: 0.9750416}
+  m_LocalRotation: {x: 0.22202215, y: 0.000000016776939, z: -0.000000003820198, w: 0.9750416}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -903,20 +903,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  experience: 40
-  gold: 1000
+  gemme: 0
   quest:
     isActive: 0
     title: 
     description: 
-    experienceReward: 0
-    goldReward: 0
+    gemmeReward: 0
     goal:
       goalType: 0
       requiredAdmount: 0
       currentAmount: 0
   healthText: {fileID: 0}
-  expText: {fileID: 0}
   gameOverPanel: {fileID: 0}
 --- !u!114 &6855274891948227462
 MonoBehaviour:

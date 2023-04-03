@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class MagicRockInventoryManager : MonoBehaviour
 {
     #region Expose
-    public static InventoryManager Instance;
+    public static MagicRockInventoryManager Instance;
     public List<Item> items = new List<Item>();
     public Transform itemContent;
     public GameObject InventoryItem;
-    public InventoryItemController[] inventoryItemsController;
+    public MagicRockInventoryItemController[] magicRockItemsController;
     #endregion
 
     #region Unity Life Cycle
@@ -52,10 +52,10 @@ public class InventoryManager : MonoBehaviour
 
     public void SetInventoryItems()
     {
-        inventoryItemsController = itemContent.GetComponentsInChildren<InventoryItemController>();
+        magicRockItemsController = itemContent.GetComponentsInChildren<MagicRockInventoryItemController>();
         for (int i = 0; i < items.Count; i++)
         {
-            inventoryItemsController[i].AddItem(items[i]);
+            magicRockItemsController[i].AddItem(items[i]);
         }
     }
     #endregion

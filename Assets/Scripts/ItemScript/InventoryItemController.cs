@@ -7,7 +7,6 @@ public class InventoryItemController : MonoBehaviour
 {
     #region Expose
     Item item;
-    public Button removeButton;
     #endregion
 
     #region methods
