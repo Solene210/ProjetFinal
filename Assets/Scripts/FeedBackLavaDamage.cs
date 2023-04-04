@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+[CreateAssetMenu(fileName = "FeedBack", menuName = "Singletons/LavaFeedBack")]
+public class FeedBackLavaDamage : ScriptableObject
+{
+    #region Expose
+    public UnityEvent _feedBackEnd;
+    #endregion
+
+    #region Unity Life Cycle
+    private void Awake()
+    {
+        //PlayerHealth.Instance._damageReceived.AddListener(LavaDamageCallBack);
+    }
+    #endregion
+
+    #region methods
+    public void LavaDamageCallBack()
+    {
+        Debug.Log("FeedBack");
+        GameObject.Find("Player").GetComponent<Animator>().SetBool("Loop", true);
+        GameObject.Find("Player").GetComponent<Animator>().SetTrigger("LavaDamage");
+
+    }
+
+    public void FeedBackEndCallBack()
+    {
+        GameObject.Find("Player").GetComponent<Animator>().SetBool("Loop", false);
+    }
+    #endregion
+}
