@@ -10,6 +10,11 @@ public class MagicRockInventoryItemController : MonoBehaviour
     #endregion
 
     #region methods
+    public void RemoveItem()
+    {
+        MagicRockInventoryManager.Instance.Remove(item);
+        Destroy(gameObject);
+    }
     public void AddItem(Item newItem)
     {
         item = newItem;

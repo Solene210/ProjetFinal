@@ -8,7 +8,7 @@ public class MagicRockInventoryManager : MonoBehaviour
 {
     #region Expose
     public static MagicRockInventoryManager Instance;
-    public List<Item> items = new List<Item>();
+    public List<Item> _itemsMagicRock = new List<Item>();
     public Transform itemContent;
     public GameObject InventoryItem;
     public MagicRockInventoryItemController[] magicRockItemsController;
@@ -24,12 +24,12 @@ public class MagicRockInventoryManager : MonoBehaviour
     #region methods
     public void Add(Item item)
     {
-        items.Add(item);
+        _itemsMagicRock.Add(item);
     }
 
     public void Remove(Item item)
     {
-        items.Remove(item);
+        _itemsMagicRock.Remove(item);
     }
 
     public void ListItem()
@@ -39,7 +39,7 @@ public class MagicRockInventoryManager : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
-        foreach (var item in items)
+        foreach (var item in _itemsMagicRock)
         {
             GameObject obj = Instantiate(InventoryItem, itemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
@@ -47,15 +47,15 @@ public class MagicRockInventoryManager : MonoBehaviour
             itemName.text = item._name;
             itemIcon.sprite = item.icon;
         }
-        SetInventoryItems();
+        //SetInventoryItems();
     }
 
     public void SetInventoryItems()
     {
         magicRockItemsController = itemContent.GetComponentsInChildren<MagicRockInventoryItemController>();
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < _itemsMagicRock.Count; i++)
         {
-            magicRockItemsController[i].AddItem(items[i]);
+            magicRockItemsController[i].AddItem(_itemsMagicRock[i]);
         }
     }
     #endregion

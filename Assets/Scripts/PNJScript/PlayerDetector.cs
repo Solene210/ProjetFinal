@@ -14,6 +14,8 @@ public class PlayerDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Cursor.lockState = CursorLockMode.None;
+
             dialogueButton.gameObject.SetActive(true);
         }
     }

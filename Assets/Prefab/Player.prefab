@@ -151,7 +151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836605561}
-  m_LocalRotation: {x: 0.22202215, y: 0.000000016776939, z: -0.000000003820198, w: 0.9750416}
+  m_LocalRotation: {x: 0.22202225, y: -0.0000000038541597, z: 8.776125e-10, w: 0.9750416}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333871446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: -4.830002}
+  m_LocalPosition: {x: 0, y: 3.5, z: -4.829998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -526,7 +526,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517914002}
-  m_LocalRotation: {x: 0.18645729, y: 0.000000018899954, z: -0.000000003586938, w: 0.98246306}
+  m_LocalRotation: {x: 0.1864574, y: 0.000000008452316, z: -0.0000000016041282, w: 0.98246306}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -731,7 +731,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905028796}
-  m_LocalRotation: {x: 0.2910697, y: -0.000000016461376, z: 0.000000005008256, w: 0.9567019}
+  m_LocalRotation: {x: 0.29106987, y: -1e-45, z: -0, w: 0.9567018}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -800,6 +800,7 @@ GameObject:
   - component: {fileID: 6855274891948227461}
   - component: {fileID: 6855274891948227462}
   - component: {fileID: 6855274891948227463}
+  - component: {fileID: 2057139299}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -902,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e73985dc7fb02a428f7782765ae33a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
   gemme: 0
   quest:
     isActive: 0
@@ -913,8 +914,26 @@ MonoBehaviour:
       goalType: 0
       requiredAdmount: 0
       currentAmount: 0
+    _victoryPanel: {fileID: 0}
   healthText: {fileID: 0}
   gameOverPanel: {fileID: 0}
+  _damageReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5192ed554a137304f8c662945a73ba81, type: 2}
+        m_TargetAssemblyTypeName: FeedBackLavaDamage, Assembly-CSharp
+        m_MethodName: LavaDamageCallBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _allowLavaDamage: 0
+  _lavaDamageTickTime: 2
 --- !u!114 &6855274891948227462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,6 +974,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &2057139299
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855274891948227468}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c680a84b0caf7da41b0b4f347bfc44ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6855274891992443030
 GameObject:
   m_ObjectHideFlags: 0

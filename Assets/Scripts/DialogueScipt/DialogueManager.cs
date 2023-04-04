@@ -1,4 +1,5 @@
 #define LOG_EVENT
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,25 +12,21 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public GameObject dialogueButton;
     public QuestGiver questGiver;
+    [SerializeField] private GameObject _dialogueCamera;
 
     #region Unity Life Cycle
     void Start()
     {
         _sentences= new Queue<string>();
-    }
-
-    private void Update()
-    {
-        //if (Input.GetKey(KeyCode.F))
-        //{
-        //    DisplayNextSentence();
-        //}
+        Cursor.lockState = CursorLockMode.Locked;
     }
     #endregion
 
     #region Methods
     public void StartDialogue(Dialogue dialogue)
     {
+        _dialogueCamera.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         dialogueBox.SetActive(true);
         dialogueButton.SetActive(false);
         nameText.text = dialogue.name;
@@ -62,6 +59,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
     }
+
     private void EndDialogue()
     {
         dialogueBox.SetActive(false);

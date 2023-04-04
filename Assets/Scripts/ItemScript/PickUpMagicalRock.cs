@@ -22,7 +22,7 @@ public class PickUpMagicalRock : MonoBehaviour
                 quest.goal.CollectMAgicRock();
                 if (quest.goal.IsReached())
                 {
-                    gemme += quest.gemmeReward;
+                    gemme += quest.gemReward;
                     quest.Complete();
                 }
             }
@@ -33,7 +33,8 @@ public class PickUpMagicalRock : MonoBehaviour
     #region methods
     private void PickUp()
     {
-        InventoryManager.Instance.Add(item);
+        //InventoryManager.Instance.Add(item);
+        MagicRockInventoryManager.Instance.Add(item);
         
         Destroy(gameObject);
         //_victoryPanel.SetActive(true);

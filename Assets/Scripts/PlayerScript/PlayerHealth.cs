@@ -74,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void GameOver()
     {
+        Time.timeScale = 0;
         gameOverPanel.SetActive(true);
     }
     #endregion

@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
+            Cursor.lockState = CursorLockMode.None;
+
             _playerWindow.SetActive(true);
             Time.timeScale = 0;
         }
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void TryAgain()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class LavaTrap : MonoBehaviour
 {
     #region Expose
-    [SerializeField] private float _time;
     [SerializeField] private int _damage;
     [SerializeField] private PlayerHealth _health;
     [SerializeField] private FeedBackLavaDamage _feedBack;

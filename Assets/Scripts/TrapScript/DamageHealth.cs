@@ -17,12 +17,4 @@ public class DamageHealth : MonoBehaviour
         }
     }
     #endregion
-
-    #region methods
-
-    #endregion
-
-    #region Private & Protected
-
-    #endregion
 }

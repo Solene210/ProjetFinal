@@ -9,7 +9,7 @@ public class Quest
     public bool isActive;
     public string title;
     public string description;
-    public int gemmeReward;
+    public int gemReward;
     public QuestGoal goal;
     [SerializeField] private GameObject _victoryPanel;
     #endregion
@@ -20,6 +20,7 @@ public class Quest
         isActive = false;
         Debug.Log(title + "was completed!");
         _victoryPanel.SetActive(true);
+        Time.timeScale = 0;
     }
     #endregion
 }

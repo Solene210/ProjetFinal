@@ -13,7 +13,8 @@ public class QuestGiver : MonoBehaviour
     public GameObject questWindow;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
-    public TextMeshProUGUI gemmeText;
+    public TextMeshProUGUI gemText;
+    [SerializeField] private GameObject _dialogueCamera;
     [Space]
     [Header("Event")]
     public UnityEvent EndDialogueEvent;
@@ -33,14 +34,17 @@ public class QuestGiver : MonoBehaviour
         questWindow.SetActive(true);
         titleText.text = quest.title;
         descriptionText.text = quest.description;
-        gemmeText.text = quest.gemmeReward.ToString();
+        gemText.text = quest.gemReward.ToString();
     }
 
     public void AcceptQuest()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        _dialogueCamera.SetActive(false);
         questWindow.SetActive(false);
         quest.isActive = true;
         player.quest = quest;
+        Debug.Log("la quête a été accepté");
     }
 #endregion
 }

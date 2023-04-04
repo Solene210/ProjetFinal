@@ -15,6 +15,6 @@ public class Item : ScriptableObject
     {
         MagicRock,
         Potion,
-        Gemme
+        Gem
     }
 }
