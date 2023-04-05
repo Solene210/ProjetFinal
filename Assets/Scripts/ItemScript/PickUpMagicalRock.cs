@@ -6,8 +6,8 @@ public class PickUpMagicalRock : MonoBehaviour
 {
     #region Expose
     public Item item;
-    public Quest quest;
-    public int gemme = 0;
+    //public Quest quest;
+    //public int gem = 0;
     [SerializeField] private GameObject _victoryPanel;
     #endregion
 
@@ -16,16 +16,17 @@ public class PickUpMagicalRock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            //if (quest.isActive)
+            //{
+            //    quest.goal.currentAmount++;
+            //    quest.goal.CollectMagicRock();
+            //    if (quest.goal.IsReached())
+            //    {
+            //        gem += quest.gemReward;
+            //        quest.Complete();
+            //    }
+            //}
             PickUp();
-            if (quest.isActive)
-            {
-                quest.goal.CollectMAgicRock();
-                if (quest.goal.IsReached())
-                {
-                    gemme += quest.gemReward;
-                    quest.Complete();
-                }
-            }
         }
     }
     #endregion
@@ -37,7 +38,14 @@ public class PickUpMagicalRock : MonoBehaviour
         MagicRockInventoryManager.Instance.Add(item);
         
         Destroy(gameObject);
-        //_victoryPanel.SetActive(true);
+        Victory();
+    }
+
+    private void Victory()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        _victoryPanel.SetActive(true);
+        Time.timeScale = 0;
     }
     #endregion
 }

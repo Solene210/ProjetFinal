@@ -19,7 +19,9 @@ public class QuestGiver : MonoBehaviour
     [Header("Event")]
     public UnityEvent EndDialogueEvent;
     #endregion
-
+    private void Update()
+    {
+    }
     #region methods
     public void CallQuestWindow()
     {

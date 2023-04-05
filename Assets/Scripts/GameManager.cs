@@ -22,13 +22,13 @@ public class GameManager : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             Cursor.lockState = CursorLockMode.None;
-
             _playerWindow.SetActive(true);
             Time.timeScale = 0;
         }
     }
     public void Play()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         _playerWindow.SetActive(false);
     }

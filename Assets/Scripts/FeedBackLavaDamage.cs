@@ -21,14 +21,14 @@ public class FeedBackLavaDamage : ScriptableObject
     public void LavaDamageCallBack()
     {
         Debug.Log("FeedBack");
-        GameObject.Find("Player").GetComponent<Animator>().SetBool("Loop", true);
-        GameObject.Find("Player").GetComponent<Animator>().SetTrigger("LavaDamage");
+        GameObject.Find("Ghost_White").GetComponentInChildren<Animator>().SetBool("Loop", true);
+        GameObject.Find("Ghost_White").GetComponentInChildren<Animator>().SetTrigger("LavaDamage");
 
     }
 
     public void FeedBackEndCallBack()
     {
-        GameObject.Find("Player").GetComponent<Animator>().SetBool("Loop", false);
+        GameObject.Find("Ghost_White").GetComponentInChildren<Animator>().SetBool("Loop", false);
     }
     #endregion
 }

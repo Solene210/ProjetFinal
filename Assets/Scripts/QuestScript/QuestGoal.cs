@@ -9,6 +9,8 @@ public class QuestGoal
     public GoalType goalType;
     public int requiredAdmount;
     public int currentAmount;
+    private GameObject _target;
+    readonly Item item;
     #endregion
 
     #region methods
@@ -25,11 +27,11 @@ public class QuestGoal
         }
     }
 
-    public void CollectMAgicRock()
+    public void CollectMagicRock()
     {
-        if(goalType == GoalType.CollectMagicRock)
+        if(goalType == GoalType.MagicRock)
         {
-            if (GameObject.FindGameObjectWithTag("MagicRock"))
+            if (item.type == Item.ItemType.MagicRock)
             {
                 currentAmount++;
             }
@@ -41,5 +43,5 @@ public class QuestGoal
 public enum GoalType
 {
     Kill,
-    CollectMagicRock
+    MagicRock
 }

@@ -604,3 +604,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
+  _feedBack: {fileID: 11400000, guid: 5192ed554a137304f8c662945a73ba81, type: 2}

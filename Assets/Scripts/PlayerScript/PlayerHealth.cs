@@ -74,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void GameOver()
     {
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         gameOverPanel.SetActive(true);
     }

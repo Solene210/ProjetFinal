@@ -18,12 +18,5 @@ public class RockTrap : MonoBehaviour
             _collider.isTrigger = true;
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (_collider.gameObject.CompareTag("Player"))
-        {
-            Destroy(_collider.gameObject);
-        }
-    }
     #endregion
 }

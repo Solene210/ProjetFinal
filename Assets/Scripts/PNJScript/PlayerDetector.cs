@@ -15,7 +15,6 @@ public class PlayerDetector : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Cursor.lockState = CursorLockMode.None;
-
             dialogueButton.gameObject.SetActive(true);
         }
     }
@@ -25,6 +24,7 @@ public class PlayerDetector : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             dialogueButton.gameObject.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
     #endregion

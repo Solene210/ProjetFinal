@@ -9,6 +9,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private float _interactionPointRadius = 0.5f;
     [SerializeField] private LayerMask _interactableMask;
     [SerializeField] private int _numFound;
+    [SerializeField] private GameObject _openImage;
     #endregion
 
     #region Unity Life Cycle
@@ -18,7 +19,8 @@ public class Interactor : MonoBehaviour
         if(_numFound > 0)
         {
             var interactable = _colliders[0].GetComponent<IInteractable>();
-            if(interactable != null && Input.GetKey(KeyCode.F))
+            _openImage.SetActive(true);
+            if (interactable != null && Input.GetKey(KeyCode.F))
             {
                 interactable.Interact(this);
             }
