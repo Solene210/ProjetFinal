@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
         _playerWindow.SetActive(false);
     }
 
+    public void LaunchGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void TryAgain()
     {
         Time.timeScale = 1;

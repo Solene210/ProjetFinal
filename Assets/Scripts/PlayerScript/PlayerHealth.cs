@@ -14,8 +14,6 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private int health = 5;
     [SerializeField] private Image _healthbar;
     [SerializeField] private TextMeshProUGUI healthText;
-    [Header("Quest Parameter")]
-    public Quest quest;
     [Header("Death Parameter")]
     [SerializeField] private GameObject gameOverPanel;
     public UnityEvent _damageReceived;
