@@ -33,6 +33,7 @@ public class QuestGoal
         {
             if (item.type == Item.ItemType.MagicRock)
             {
+                item.value = currentAmount;
                 currentAmount++;
             }
         }

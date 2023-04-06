@@ -8,9 +8,9 @@ public class MagicRockInventoryManager : MonoBehaviour
 {
     #region Expose
     public static MagicRockInventoryManager Instance;
-    public List<Item> _itemsMagicRock = new List<Item>();
-    public Transform itemContent;
-    public GameObject InventoryItem;
+    [SerializeField] private List<Item> _itemsMagicRock = new List<Item>();
+    [SerializeField] private Transform itemContent;
+    [SerializeField] private GameObject InventoryItem;
     public MagicRockInventoryItemController[] magicRockItemsController;
     #endregion
 

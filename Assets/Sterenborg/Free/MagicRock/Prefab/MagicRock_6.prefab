@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3120298119100901148}
   - component: {fileID: 5601447756688202863}
   - component: {fileID: 8161721542770915963}
+  - component: {fileID: 6000843843637849475}
   - component: {fileID: 711579139}
   m_Layer: 0
   m_Name: MagicRock_6
@@ -114,6 +115,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 563b995b7b91863499a99565569fe3ca, type: 2}
+  _victoryPanel: {fileID: 0}
+--- !u!114 &6000843843637849475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524892835980279966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864a59a381dfbc247a458498696c3eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _crystal: {fileID: 0}
+  _crystalEmpty: {fileID: 21300000, guid: 975858fb3ca1afd4bae7ecac68e8d447, type: 3}
+  _crystalColor: {fileID: 21300000, guid: fc2f2cc09b73b304db7cfb1208c068e9, type: 3}
 --- !u!136 &711579139
 CapsuleCollider:
   m_ObjectHideFlags: 0

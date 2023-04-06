@@ -21,6 +21,7 @@ public class Quest
         Debug.Log(title + "was completed!");
         _victoryPanel.SetActive(true);
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
     }
     #endregion
 }

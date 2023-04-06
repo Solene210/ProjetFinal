@@ -336,17 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: e88773bbf31b8054f84f6914cb45e78a, type: 2}
-  quest:
-    isActive: 0
-    title: 
-    description: 
-    gemmeReward: 0
-    goal:
-      goalType: 0
-      requiredAdmount: 0
-      currentAmount: 0
-    _victoryPanel: {fileID: 0}
-  gemme: 0
   _victoryPanel: {fileID: 0}
 --- !u!114 &8933792777754156406
 MonoBehaviour:
@@ -374,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _crystal: {fileID: 0}
-  _crystalEmpty: {fileID: 0}
-  _crystalColor: {fileID: 0}
+  _crystalEmpty: {fileID: 21300000, guid: 975858fb3ca1afd4bae7ecac68e8d447, type: 3}
+  _crystalColor: {fileID: 21300000, guid: f8161cbe23b96de478cfe865cd1c2e01, type: 3}
 --- !u!1 &6036736767966139523
 GameObject:
   m_ObjectHideFlags: 0

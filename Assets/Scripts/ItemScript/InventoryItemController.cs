@@ -25,8 +25,6 @@ public class InventoryItemController : MonoBehaviour
     {
         switch (item.type)
         {
-            case Item.ItemType.MagicRock:
-                break;
             case Item.ItemType.Potion:
                 PlayerHealth.Instance.IncreaseHealth(item.value);
                 break;

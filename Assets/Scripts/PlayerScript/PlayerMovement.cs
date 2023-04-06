@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int _walkSpeed;
     [SerializeField] private int _sprintSpeed;
     [SerializeField] private float _jumpForce;
-    [SerializeField] private Animator _animator;
     [Space]
     [Header("Floor Detection")]
     [SerializeField] private LayerMask _groundMask;
@@ -75,8 +74,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _direction = _cameraTransform.right * Input.GetAxis("Horizontal") + _cameraTransform.forward * Input.GetAxis("Vertical");
         _direction *= _walkSpeed;
-        _animator.SetFloat("speedX", _direction.x);
-        _animator.SetFloat("speedZ", _direction.z);
         if (Input.GetButton("Sprint"))
         {
             Sprint();
@@ -129,6 +126,8 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Private & Protected
+    public Vector3 Direction { get => _direction; set => _direction = value; }
+
     private Vector3 _direction = new Vector3();
     private Transform _cameraTransform;
     private Rigidbody _rigidbody;

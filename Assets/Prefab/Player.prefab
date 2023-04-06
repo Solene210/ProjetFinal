@@ -182,7 +182,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836605561}
-  m_LocalRotation: {x: 0.22202215, y: 0.000000016776939, z: -0.000000003820198, w: 0.9750416}
+  m_LocalRotation: {x: 0.22202213, y: 0.000000016776939, z: -0.000000003820197, w: 0.9750416}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -762,7 +762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905028796}
-  m_LocalRotation: {x: 0.2910697, y: 0.000000016461376, z: -0.000000005008256, w: 0.9567019}
+  m_LocalRotation: {x: 0.2910697, y: -0.000000016461376, z: 0.000000005008256, w: 0.9567019}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -833,6 +833,7 @@ GameObject:
   - component: {fileID: 6855274891948227463}
   - component: {fileID: 2057139299}
   - component: {fileID: 2055921532}
+  - component: {fileID: 3643971126435642033}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -937,19 +938,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e73985dc7fb02a428f7782765ae33a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
-  gemme: 0
+  _healthbar: {fileID: 0}
+  healthText: {fileID: 0}
   quest:
     isActive: 0
-    title: 
-    description: 
+    title: The Labyrinthe
+    description: You have to find and keep the Magic Rock Green
     gemReward: 0
     goal:
-      goalType: 0
-      requiredAdmount: 0
+      goalType: 1
+      requiredAdmount: 1
       currentAmount: 0
     _victoryPanel: {fileID: 0}
-  healthText: {fileID: 0}
   gameOverPanel: {fileID: 0}
   _damageReceived:
     m_PersistentCalls:
@@ -1016,7 +1018,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6855274891948227468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c680a84b0caf7da41b0b4f347bfc44ca, type: 2}
   m_CullingMode: 0
@@ -1047,6 +1049,19 @@ MonoBehaviour:
     m_Bits: 128
   _numFound: 0
   _openImage: {fileID: 0}
+--- !u!114 &3643971126435642033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855274891948227468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8dda5a6df07b143a59d91a8d9757ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 9104019162294325913}
 --- !u!1 &6855274891992443030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,15 +1421,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 110
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 110
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 110
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,7 +1437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.097
+      value: -1.047
       objectReference: {fileID: 0}
     - target: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1460,8 +1475,17 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95000010230734170, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 740ca10819cce7440b9ca146b368520c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
+--- !u!95 &9104019162294325913 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95000010230734170, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}
+  m_PrefabInstance: {fileID: 9153138742583693251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9153652887459173821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012323953278, guid: e3e8e33af43da834294d5f9a02da77e7, type: 3}

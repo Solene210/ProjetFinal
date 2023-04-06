@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     #region Expose
     public static PlayerHealth Instance;
-    public int health = 5;
-    public int gemme = 0;
+    [Header("Health Parameter")]
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int health = 5;
+    [SerializeField] private Image _healthbar;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [Header("Quest Parameter")]
     public Quest quest;
-    public TextMeshProUGUI healthText;
+    [Header("Death Parameter")]
     [SerializeField] private GameObject gameOverPanel;
     public UnityEvent _damageReceived;
     #endregion
@@ -31,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
+        _healthbar.fillAmount = health / maxHealth;
         if(_isTimerOn)
         {
             _lavaDamageTimer += Time.deltaTime;

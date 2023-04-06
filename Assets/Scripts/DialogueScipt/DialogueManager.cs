@@ -7,12 +7,12 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
-    public GameObject dialogueBox;
-    public GameObject dialogueButton;
-    public QuestGiver questGiver;
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private GameObject dialogueButton;
     [SerializeField] private GameObject _dialogueCamera;
+    public QuestGiver questGiver;
 
     #region Unity Life Cycle
     void Start()

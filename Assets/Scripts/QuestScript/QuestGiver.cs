@@ -10,10 +10,10 @@ public class QuestGiver : MonoBehaviour
     [Header("Quest Parameter")]
     public Quest quest;
     public PlayerHealth player;
-    public GameObject questWindow;
-    public TextMeshProUGUI titleText;
-    public TextMeshProUGUI descriptionText;
-    public TextMeshProUGUI gemText;
+    [SerializeField] private GameObject questWindow;
+    [SerializeField] private TextMeshProUGUI titleText;
+    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private TextMeshProUGUI gemText;
     [SerializeField] private GameObject _dialogueCamera;
     [Space]
     [Header("Event")]

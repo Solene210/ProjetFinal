@@ -14,7 +14,6 @@ public class Item : ScriptableObject
     public enum ItemType
     {
         MagicRock,
-        Potion,
-        Gem
+        Potion
     }
 }

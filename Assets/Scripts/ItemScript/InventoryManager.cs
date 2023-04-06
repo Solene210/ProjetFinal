@@ -8,9 +8,9 @@ public class InventoryManager : MonoBehaviour
 {
     #region Expose
     public static InventoryManager Instance;
-    public List<Item> items = new List<Item>();
-    public Transform itemContent;
-    public GameObject InventoryItem;
+    [SerializeField] private List<Item> items = new List<Item>();
+    [SerializeField] private Transform itemContent;
+    [SerializeField] private GameObject InventoryItem;
     public InventoryItemController[] inventoryItemsController;
     #endregion
 
