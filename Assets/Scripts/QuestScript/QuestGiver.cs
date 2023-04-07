@@ -20,6 +20,7 @@ public class QuestGiver : MonoBehaviour
     #endregion
     private void Update()
     {
+
     }
     #region methods
     public void CallQuestWindow()
@@ -52,6 +53,7 @@ public class QuestGiver : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         _dialogueCamera.SetActive(false);
         questWindow.SetActive(false);
+        quest.isActive = false;
         Debug.Log("la quête a été refusé");
     }
     #endregion

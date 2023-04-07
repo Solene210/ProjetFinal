@@ -10,8 +10,8 @@ public class PlayerHealth : MonoBehaviour
     #region Expose
     public static PlayerHealth Instance;
     [Header("Health Parameter")]
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int health = 5;
+    [SerializeField] private float maxHealth = 100;
+    [SerializeField] private float health = 5;
     [SerializeField] private Image _healthbar;
     [SerializeField] private TextMeshProUGUI healthText;
     [Header("Death Parameter")]
@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        health = maxHealth;
         healthText.text = $"HP : {health}";
     }
     private void Update()

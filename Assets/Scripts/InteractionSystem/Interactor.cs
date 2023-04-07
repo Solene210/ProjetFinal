@@ -22,8 +22,12 @@ public class Interactor : MonoBehaviour
             _openImage.SetActive(true);
             if (interactable != null && Input.GetKey(KeyCode.F))
             {
-                interactable.Interact(this);
+                //interactable.Interact(this);
             }
+        }
+        else
+        {
+            _openImage.SetActive(false);
         }
     }
 

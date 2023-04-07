@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -12,6 +13,7 @@ public class Quest
     public int gemReward;
     public QuestGoal goal;
     [SerializeField] private GameObject _victoryPanel;
+    [SerializeField] private TextMeshProUGUI _gemText;
     #endregion
 
     #region methods
@@ -19,6 +21,7 @@ public class Quest
     {
         isActive = false;
         Debug.Log(title + "was completed!");
+        _gemText.text = gemReward.ToString();
         _victoryPanel.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;

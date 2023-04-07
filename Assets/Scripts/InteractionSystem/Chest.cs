@@ -6,12 +6,23 @@ public class Chest : MonoBehaviour, IInteractable
 {
     #region Expose
     [SerializeField] private string _prompt;
-    public string InteractionPrompt => _prompt;
-    public bool Interact(Interactor interactor)
+
+    public void Interact()
     {
-        Debug.Log("Openig chest");
-        return true;
+        throw new System.NotImplementedException();
     }
+
+    public void StopInteract()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    //public string InteractionPrompt => _prompt;
+    //public bool Interact(Interactor interactor)
+    //{
+    //    Debug.Log("Openig chest");
+    //    return true;
+    //}
     #endregion
 
     #region Unity Life Cycle
