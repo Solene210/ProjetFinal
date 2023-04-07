@@ -10,7 +10,7 @@ public class QuestGoal
     public int requiredAdmount;
     public int currentAmount;
     private GameObject _target;
-    readonly Item item;
+    //public Item item;
     #endregion
 
     #region methods
@@ -29,13 +29,11 @@ public class QuestGoal
 
     public void CollectMagicRock()
     {
+        Debug.Log("collectMagicRockCallBack");
         if(goalType == GoalType.MagicRock)
         {
-            if (item.type == Item.ItemType.MagicRock)
-            {
-                item.value = currentAmount;
-                currentAmount++;
-            }
+            //item.value = currentAmount;
+            currentAmount++;
         }
     }
     #endregion

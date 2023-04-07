@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MagicRockInventoryManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class MagicRockInventoryManager : MonoBehaviour
     [SerializeField] private Transform itemContent;
     [SerializeField] private GameObject InventoryItem;
     public MagicRockInventoryItemController[] magicRockItemsController;
+    public UnityEvent MagicRockCollected;
     #endregion
 
     #region Unity Life Cycle
@@ -25,6 +27,7 @@ public class MagicRockInventoryManager : MonoBehaviour
     public void Add(Item item)
     {
         _itemsMagicRock.Add(item);
+        MagicRockCollected.Invoke();
     }
 
     public void Remove(Item item)

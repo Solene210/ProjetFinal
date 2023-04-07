@@ -19,12 +19,16 @@ public class Quest
     #region methods
     public void Complete()
     {
+        if (goal.IsReached())
+        {
+            
         isActive = false;
         Debug.Log(title + "was completed!");
         _gemText.text = gemReward.ToString();
         _victoryPanel.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
+        }
     }
     #endregion
 }

@@ -14,13 +14,15 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI gemText;
     [SerializeField] private GameObject _dialogueCamera;
+
     [Space]
     [Header("Event")]
     public UnityEvent EndDialogueEvent;
     #endregion
     private void Update()
     {
-
+        //A trouver mieux comme emplacement
+        quest.Complete();
     }
     #region methods
     public void CallQuestWindow()
@@ -45,6 +47,7 @@ public class QuestGiver : MonoBehaviour
         _dialogueCamera.SetActive(false);
         questWindow.SetActive(false);
         quest.isActive = true;
+        MagicRockInventoryManager.Instance.MagicRockCollected.AddListener(quest.goal.CollectMagicRock);
         Debug.Log("la quête a été accepté");
     }
 
