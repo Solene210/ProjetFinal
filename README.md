@@ -6,6 +6,7 @@
  Pour ce niveau il s'agit d'un labyrinthe et on doit trouver la première pierre.
  
  On ne peut jouer qu'avec le clavier / souris
+ 
  Pour les feedback aller ici : https://github.com/Solene210/ProjetFinal/issues.
  
 Pour tester le jeu télécharge le build ici : https://drive.google.com/file/d/16XF7jNI42s-MXpV3oRiqEgle2jhck0zA/view?usp=sharing
