@@ -9,4 +9,4 @@
  
  Pour les feedback aller ici : https://github.com/Solene210/ProjetFinal/issues.
  
-Pour tester le jeu télécharge le build ici : https://drive.google.com/file/d/16XF7jNI42s-MXpV3oRiqEgle2jhck0zA/view?usp=sharing
+Pour tester le jeu télécharge le build ici : https://drive.google.com/file/d/1_lUk38JnbwmkiGvTXM-LGUfD2_BqpJ_e/view?usp=sharing
