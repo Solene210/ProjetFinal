@@ -14,7 +14,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float health = 5;
     [SerializeField] private Image _healthbar;
     [SerializeField] private TextMeshProUGUI healthText;
-    [Header("Death Parameter")]
+    [Header("Death/Damage Parameter")]
+    [SerializeField] private GameObject damagePanel;
     [SerializeField] private GameObject gameOverPanel;
     public UnityEvent _damageReceived;
     #endregion
@@ -39,8 +40,13 @@ public class PlayerHealth : MonoBehaviour
         if(_isTimerOn)
         {
             _lavaDamageTimer += Time.deltaTime;
+            damagePanel.SetActive(true);
+           
+            //StartCoroutine(coroutine());
             if (_lavaDamageTimer >= _lavaDamageTickTime)
             {
+                damagePanel.SetActive(false);
+                //StopCoroutine(coroutine());
                 _allowLavaDamage = true;
                 _isTimerOn = false;
                 _lavaDamageTimer = 0;
@@ -82,6 +88,39 @@ public class PlayerHealth : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         gameOverPanel.SetActive(true);
+    }
+
+    IEnumerator coroutine()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            yield return new WaitForSeconds(1f);
+            damagePanel.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            damagePanel.SetActive(false);
+        }
+
+        //float blinkSpeed = 0.2f; // La vitesse à laquelle le texte clignote
+        //float blinkTime = 0; // Le temps écoulé depuis le dernier clignotement
+        //bool blink = false; // Indique si le texte doit être visible ou non
+        //damagePanel.SetActive(false);
+
+        //for (int i = 0; i < 400; i++)
+        //{
+        //    blinkTime += Time.deltaTime;
+
+        //    // Clignoter le texte
+        //    if (blinkTime >= blinkSpeed)
+        //    {
+        //        Debug.Log("BOUCLE FOR IF");
+        //        blink = !blink;
+        //        damagePanel.SetActive(true);
+        //        blinkTime = 0;
+        //    }
+
+        //    yield return null;
+        //}
+        //damagePanel.SetActive(false);
     }
     #endregion
 

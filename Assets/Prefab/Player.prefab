@@ -182,7 +182,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836605561}
-  m_LocalRotation: {x: 0.22202215, y: -0.000000016776939, z: 0.000000003820198, w: 0.9750416}
+  m_LocalRotation: {x: 0.22202213, y: 0.000000016777385, z: -0.0000000038202987, w: 0.9750416}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -762,7 +762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905028796}
-  m_LocalRotation: {x: 0.2910697, y: 0.000000016461376, z: -0.000000005008256, w: 0.9567019}
+  m_LocalRotation: {x: 0.2910697, y: -0.000000016461376, z: 0.000000005008256, w: 0.9567019}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -827,8 +827,8 @@ GameObject:
   - component: {fileID: 6855274891948227456}
   - component: {fileID: 6855274891948227457}
   - component: {fileID: 6855274891948227458}
-  - component: {fileID: 6855274891948227459}
   - component: {fileID: 6855274891948227463}
+  - component: {fileID: 9088632119323954331}
   - component: {fileID: 2057139299}
   - component: {fileID: 6855274891948227461}
   - component: {fileID: 6855274891948227462}
@@ -912,20 +912,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6855274891948227459
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6855274891948227468}
-  m_Material: {fileID: 13400000, guid: f92a2f230bdc82e429088eaa5e338afa, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.2780106
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.3609947, z: 0}
 --- !u!54 &6855274891948227463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -942,6 +928,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &9088632119323954331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855274891948227468}
+  m_Material: {fileID: 13400000, guid: f92a2f230bdc82e429088eaa5e338afa, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2205849, y: 0.94733834, z: 1}
+  m_Center: {x: -0.03954506, y: 0.10241282, z: 0}
 --- !u!95 &2057139299
 Animator:
   serializedVersion: 5
@@ -978,16 +977,7 @@ MonoBehaviour:
   health: 100
   _healthbar: {fileID: 0}
   healthText: {fileID: 0}
-  quest:
-    isActive: 0
-    title: The Labyrinthe
-    description: You have to find and keep the Magic Rock Green
-    gemReward: 0
-    goal:
-      goalType: 1
-      requiredAdmount: 1
-      currentAmount: 0
-    _victoryPanel: {fileID: 0}
+  damagePanel: {fileID: 0}
   gameOverPanel: {fileID: 0}
   _damageReceived:
     m_PersistentCalls:
@@ -1043,7 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactionPoint: {fileID: 50832256}
-  _interactionPointRadius: 0.71
+  _interactionPointRadius: 1.36
   _interactableMask:
     serializedVersion: 2
     m_Bits: 128

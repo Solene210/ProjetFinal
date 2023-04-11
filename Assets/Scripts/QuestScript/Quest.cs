@@ -21,13 +21,13 @@ public class Quest
     {
         if (goal.IsReached())
         {
-            
-        isActive = false;
-        Debug.Log(title + "was completed!");
-        _gemText.text = gemReward.ToString();
-        _victoryPanel.SetActive(true);
-        Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
+            isActive = false;
+            Debug.Log(title + "was completed!");
+            //GemPickUp gemPickUp = GameObject.FindWithTag("Gem").GetComponent<GemPickUp>();
+            //_gemText.text = (gemReward + gemPickUp.gem.value).ToString();
+            _victoryPanel.SetActive(true);
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
     #endregion

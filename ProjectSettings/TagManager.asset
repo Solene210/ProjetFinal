@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MagicRock
   - Ground
+  - Gem
   layers:
   - Default
   - TransparentFX
