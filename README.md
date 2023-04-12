@@ -6,5 +6,3 @@
  Pour ce niveau il s'agit d'un labyrinthe et on doit trouver la première pierre.
  
  On ne peut jouer qu'avec le clavier / souris
- 
-
