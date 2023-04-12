@@ -9,7 +9,6 @@ public class QuestGoal
     public GoalType goalType;
     public int requiredAdmount;
     public int currentAmount;
-    private GameObject _target;
     //public Item item;
     #endregion
 

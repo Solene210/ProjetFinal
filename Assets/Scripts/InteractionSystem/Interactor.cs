@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactor : MonoBehaviour
+public class Interactor : MonoBehaviour, IInteractable
 {
     #region Expose
     [SerializeField] private Transform _interactionPoint;
@@ -18,16 +18,11 @@ public class Interactor : MonoBehaviour
         _numFound = Physics.OverlapSphereNonAlloc(_interactionPoint.position, _interactionPointRadius, _colliders, _interactableMask);
         if(_numFound > 0)
         {
-            var interactable = _colliders[0].GetComponent<IInteractable>();
-            _openImage.SetActive(true);
-            if (interactable != null && Input.GetKey(KeyCode.F))
-            {
-                //interactable.Interact(this);
-            }
+            Interact();
         }
         else
         {
-            _openImage.SetActive(false);
+            StopInteract();
         }
     }
 
@@ -35,6 +30,21 @@ public class Interactor : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(_interactionPoint.position, _interactionPointRadius);
+    }
+
+    public void Interact()
+    {
+        var interactable = _colliders[0];
+        _openImage.SetActive(true);
+        if (interactable != null && Input.GetKey(KeyCode.F))
+        {
+            //interactable.Interact(this);
+        }
+    }
+
+    public void StopInteract()
+    {
+        _openImage.SetActive(false);
     }
     #endregion
 

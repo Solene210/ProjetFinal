@@ -6,7 +6,6 @@ public class MagicRockInventoryItemController : MonoBehaviour
 {
     #region Expose
     Item item;
-    Quest quest;
     #endregion
 
     #region methods

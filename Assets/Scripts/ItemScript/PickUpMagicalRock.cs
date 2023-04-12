@@ -24,11 +24,14 @@ public class PickUpMagicalRock : MonoBehaviour
     #region methods
     private void PickUp()
     {
-        //InventoryManager.Instance.Add(item);
         MagicRockInventoryManager.Instance.Add(item);
         
         Destroy(gameObject);
-        //Victory();
+        QuestGiver questGiver = GameObject.Find("QuestGiver").GetComponent<QuestGiver>();
+        if(questGiver.quest.isActive == false)
+        {
+            Victory();
+        }
     }
 
     private void Victory()

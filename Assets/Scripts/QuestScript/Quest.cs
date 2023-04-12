@@ -23,8 +23,8 @@ public class Quest
         {
             isActive = false;
             Debug.Log(title + "was completed!");
-            //GemPickUp gemPickUp = GameObject.FindWithTag("Gem").GetComponent<GemPickUp>();
-            //_gemText.text = (gemReward + gemPickUp.gem.value).ToString();
+            GemPickUp gemPickUp = GameObject.FindWithTag("Gem").GetComponent<GemPickUp>();
+            _gemText.text = (gemReward + gemPickUp.gem.value).ToString();
             _victoryPanel.SetActive(true);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
