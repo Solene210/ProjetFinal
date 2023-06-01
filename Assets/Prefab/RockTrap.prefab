@@ -603,5 +603,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9decb5a5084c6ee408507d41dd59b707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damage: 25
   _feedBack: {fileID: 11400000, guid: 5192ed554a137304f8c662945a73ba81, type: 2}

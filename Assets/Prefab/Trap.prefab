@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3400206895441400763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.21, y: 0.20928144, z: -65.06}
-  m_LocalScale: {x: 0.5493056, y: 1, z: 1.9556481}
+  m_LocalScale: {x: 2.22, y: 1, z: 2.82}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3400206896895971024}
@@ -61,6 +61,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _respawnPoint:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &3400206896895971025
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,8 +93,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3400206896895971025}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2818, y: -0.3, z: 3.2364}
-  m_LocalScale: {x: 0.84621227, y: 1, z: 0.6126784}
+  m_LocalPosition: {x: -1.1605, y: -0.3, z: 3.2364}
+  m_LocalScale: {x: 0.85772073, y: 1, z: 0.6126784}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2581943561170229509}
@@ -334,7 +337,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3910
+  m_VersionIndex: 3919
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -471,7 +474,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6496875455178291990}
   serializedVersion: 8
-  lengthInSec: 2
+  lengthInSec: 3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -599,7 +602,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.63
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1099,7 +1102,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 5, y: 5, z: 5}
+    m_Scale: {x: 22.85, y: 8.43, z: 5}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
