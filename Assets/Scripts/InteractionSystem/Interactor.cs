@@ -46,6 +46,11 @@ public class Interactor : MonoBehaviour, IInteractable
     {
         _openImage.SetActive(false);
     }
+
+    public bool Interact(Interactor interactor)
+    {
+        throw new System.NotImplementedException();
+    }
     #endregion
 
     #region methods
@@ -54,5 +59,7 @@ public class Interactor : MonoBehaviour, IInteractable
 
     #region Private & Protected
     private readonly Collider[] _colliders = new Collider[3];
+
+    public string InteractionPrompt => throw new System.NotImplementedException();
     #endregion
 }

@@ -6,6 +6,7 @@ public class Chest : MonoBehaviour, IInteractable
 {
     #region Expose
     [SerializeField] private string _prompt;
+    [SerializeField] private GameObject _lootWindow;
 
     public void Interact()
     {
@@ -17,12 +18,14 @@ public class Chest : MonoBehaviour, IInteractable
         throw new System.NotImplementedException();
     }
 
-    //public string InteractionPrompt => _prompt;
-    //public bool Interact(Interactor interactor)
-    //{
-    //    Debug.Log("Openig chest");
-    //    return true;
-    //}
+    public string InteractionPrompt => _prompt;
+    public bool Interact(Interactor interactor)
+    {
+        Debug.Log("Openig chest");
+        _lootWindow.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        return true;
+    }
     #endregion
 
     #region Unity Life Cycle

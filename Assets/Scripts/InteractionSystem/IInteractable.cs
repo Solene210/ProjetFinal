@@ -6,6 +6,6 @@ public interface IInteractable
 {
     public void Interact();
     public void StopInteract();
-    //public string InteractionPrompt { get; }
-    //public bool Interact(Interactor interactor);
+    public string InteractionPrompt { get; }
+    public bool Interact(Interactor interactor);
 }
